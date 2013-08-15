@@ -1,4 +1,4 @@
-# Milkman, delivering low-fat, delicious data
+# Milkman, delivering fresh, low-fat, and delicious data
 Milkman is a Python library built for generating bounded random data for database ORM's. It was built to be extremely extensible and easy to use, while remaining database agnostic. Currently the only implementation included is for MongoEngine.
 
 Milkman is based of [this project](https://github.com/ccollins/milkman) by the same name. The original library was built around the Django ORM and was very minimalistic, this rewrite was intended to extend on the core ideas while allowing a large range of ORM's and fields with a smart interface for extendability.
