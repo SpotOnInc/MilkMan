@@ -22,7 +22,7 @@ from my_models import User
 
 def fill_customers(rows):
     truck = getDairyTruck()
-    truck.registry.addByField("custom_value", IntGEnerator(length=4, astype=str))
+    truck.registry.addByField("custom_value", IntGenerator(length=4, astype=str))
     truck.rows = 500
     [i.save() for i in truck.deliver(User)]
 ```
