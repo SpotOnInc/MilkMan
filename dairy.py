@@ -255,7 +255,7 @@ class ObjectIDGenerator(MilkCarton):
         if not amount:
             return
 
-        obj = self.mode.objects.skip(random.randint(0, amount)).limit(1)
+        obj = self.model.objects.skip(random.randint(0, amount)).limit(1)
         return obj.id
 
 def getDairyTruck():

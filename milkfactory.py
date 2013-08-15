@@ -72,15 +72,13 @@ class MilkTruck(object):
         for key, field in model_cls._fields.iteritems():
             gen = self.registry.get(field)
             if not gen and not quiet:
-                print "Field '%s' is not in the registry!" % field
-                continue
+                raise Exception("Field '%s' is not in the registry!" % field)
 
             gen.parent = self
 
             self.field_to_gen[field.name] = (field, gen)
 
     def deliver(self, model_cls):
-        #print "Delivering to %s" % model_cls
         self.packTruck(model_cls)
 
         for row in range(0, self.rows):
